@@ -7,8 +7,9 @@ interface WorklogItemProps {
 }
 
 export const WorklogItem: FC<WorklogItemProps> = ({ item }) => {
+  const containerClassName = item.withError ? s.errorContainer : s.container
   return (
-    <div className={s.container}>
+    <div className={containerClassName}>
       <div className={s.cell}>{item.from}</div>
       <div className={s.cell}>{item.to}</div>
     </div>

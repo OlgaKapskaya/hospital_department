@@ -1,18 +1,48 @@
+.link {
+  color: black;
+  font-family: Montserrat, sans-serif;
+
+  &:link {
+    text-decoration: none;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: cadetblue;
+    font-weight: bold;
+  }
+}
+
 .container {
   display: flex;
+  font-family: Montserrat, sans-serif;
 
   .cell {
-    border: 1px solid cadetblue;
+    border-bottom: 1px solid cadetblue;
     padding: 5px;
     width: 25vh;
   }
 
   .cellTitle {
     background-color: cadetblue;
-    border: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
     text-align: left;
     padding: 5px;
     width: 25vh;
     font-weight: bold;
+  }
+}
+.errorContainer {
+  display: flex;
+  font-family: Montserrat, sans-serif;
+
+  .cell {
+    border-bottom: 1px solid cadetblue;
+    padding: 5px;
+    width: 25vh;
+    background-color: red;
   }
 }

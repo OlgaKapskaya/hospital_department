@@ -9,7 +9,7 @@ interface EmployeeProps {
 
 export const Employee: FC<EmployeeProps> = ({ employee }) => {
   return (
-    <NavLink to={`/worklogs/${employee.id}`}>
+    <NavLink to={`/worklogs/${employee.id}`} className={s.link}>
       <div className={s.container}>
         <div className={s.cell}>{employee.lastName}</div>
         <div className={s.cell}>{employee.firstName}</div>

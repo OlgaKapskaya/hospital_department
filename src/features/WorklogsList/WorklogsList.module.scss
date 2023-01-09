@@ -1,0 +1,26 @@
+.worklogsListContainer {
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  .linkButton {
+    width: max-content;
+    background-color: cadetblue;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: whitesmoke;
+
+    &:hover {
+      background-color: darkcyan;
+    }
+  }
+
+  .info {
+    margin: 10px 0;
+  }
+
+  .employeeName {
+    font-weight: bold;
+  }
+}

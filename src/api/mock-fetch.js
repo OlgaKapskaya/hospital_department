@@ -36,7 +36,7 @@ const employees = [
     firstName: 'Авиценна',
     lastName: 'Сина',
     middleName: 'Абу Али Ибн',
-    birthDate: '980-08-23',
+    birthDate: '1980-08-23',
     phone: '+15559171855',
   },
   {

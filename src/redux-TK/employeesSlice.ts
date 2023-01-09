@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { getEmployees } from '../api/api'
+import { changeDateUtil } from '../common/utils/changeDateUtil'
 
 export interface EmployeeType {
   id: number
@@ -17,6 +18,11 @@ interface EmployeesStateType {
 export const getEmployeesTC = createAsyncThunk('employees/getEmployees', async () => {
   const response = await getEmployees()
   return response
+    .map((elem: EmployeeType) => ({
+      ...elem,
+      birthDate: changeDateUtil(elem.birthDate),
+    }))
+    .sort((a: EmployeeType, b: EmployeeType) => a.lastName.localeCompare(b.lastName))
 })
 
 export const employeesSlice = createSlice({
