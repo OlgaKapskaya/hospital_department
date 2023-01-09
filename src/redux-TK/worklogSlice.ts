@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { getWorklog } from '../api/api'
 
 export interface Worklog {
@@ -24,13 +24,7 @@ export const getWorklogsTC = createAsyncThunk('worklogs/getWorklogs', async () =
 export const worklogSlice = createSlice({
   name: 'worklogs',
   initialState: {} as WorklogsStateType,
-  reducers: {
-    setWorklogError: (state, action: PayloadAction<number>) => {
-      state.worklogs.map((elem) =>
-        elem.id === action.payload ? { ...elem, withError: true } : elem
-      )
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getWorklogsTC.fulfilled, (state, action) => {
       state.worklogs = action.payload
