@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.7535f843.css",
-    "main.js": "/static/js/main.b6acfdad.js",
-    "index.html": "/index.html",
-    "main.7535f843.css.map": "/static/css/main.7535f843.css.map",
-    "main.b6acfdad.js.map": "/static/js/main.b6acfdad.js.map"
+    "main.css": "/hospital_department/static/css/main.7535f843.css",
+    "main.js": "/hospital_department/static/js/main.b6acfdad.js",
+    "index.html": "/hospital_department/index.html",
+    "main.7535f843.css.map": "/hospital_department/static/css/main.7535f843.css.map",
+    "main.b6acfdad.js.map": "/hospital_department/static/js/main.b6acfdad.js.map"
   },
   "entrypoints": [
     "static/css/main.7535f843.css",
