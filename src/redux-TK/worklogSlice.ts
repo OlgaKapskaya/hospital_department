@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { getWorklog } from '../api/api'
+import { getErrorsIdArray } from '../common/utils/getErrorsIdArray'
 
 export interface Worklog {
   id: number
@@ -16,9 +17,20 @@ interface WorklogsStateType {
   worklogs: WorklogType[]
 }
 
-export const getWorklogsTC = createAsyncThunk('worklogs/getWorklogs', async () => {
+export const getWorklogsTC = createAsyncThunk('worklogs/getWorklogs', async (count: number) => {
   const response = await getWorklog()
-  return response.map((elem: Worklog) => ({ ...elem, withError: false }))
+  const errors = getErrorsIdArray(response, count)
+  return response.map((elem: Worklog) =>
+    errors?.includes(elem.id)
+      ? {
+          ...elem,
+          withError: true,
+        }
+      : {
+          ...elem,
+          withError: false,
+        }
+  )
 })
 
 export const worklogSlice = createSlice({

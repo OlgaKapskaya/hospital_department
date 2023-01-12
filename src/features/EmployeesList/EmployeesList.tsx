@@ -1,12 +1,12 @@
 import { FC, useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../redux-TK/store'
-import { getEmployeesTC } from '../../redux-TK/employeesSlice'
 import { Employee } from './Employee/Employee'
 import { TableTitle } from './TableTitle/TableTitle'
+import { getEmployeesTC } from '../../redux-TK/employeesSlice'
 
 export const EmployeesList: FC = () => {
-  const dispatch = useAppDispatch()
   const employees = useAppSelector((state) => state.employees.employees)
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
     dispatch(getEmployeesTC())
