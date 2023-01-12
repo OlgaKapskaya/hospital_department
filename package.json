@@ -1,10 +1,11 @@
 {
   "name": "hospital_department",
-  "homepage": "https://OlgaKapskaya.github.io/#/hospital_department",
+  "homepage": "https://OlgaKapskaya.github.io/hospital_department",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
+    "gh-pages": "^4.0.0",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -22,7 +23,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint . --fix",
     "format": "prettier . --write",
-    "fix-code": "yarn lint && yarn format"
+    "fix-code": "yarn lint && yarn format",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

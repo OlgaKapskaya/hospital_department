@@ -17,7 +17,7 @@ Highlight in red the times when a physician's departure from the department invo
 
 ## Demo
 
-https://OlgaKapskaya.github.io/#/hospital_department
+https://olgakapskaya.github.io/hospital_department/
 
 
 ## Technology stack
