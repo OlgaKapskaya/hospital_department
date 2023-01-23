@@ -20,7 +20,7 @@ Highlight in red the times when a physician's departure from the department invo
 https://olgakapskaya.github.io/hospital_department/
 
 
-## Technology stack
+## Technology  stack
 
 - react
 - redux-toolkit
